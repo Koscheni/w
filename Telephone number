@@ -20,7 +20,7 @@ int main()
             cout << "Введите правильный вариант: ";
             cin >> number;
             //system("pause");
-            //return 0;
+            //return 0 ;
         }
 
 }
