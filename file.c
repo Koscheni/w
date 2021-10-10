@@ -3,15 +3,13 @@
 
 int main(int argc, char **argv)
 {
-    char first[255], last[255];
+    char name[255];
 
-    printf("Enter your first name: ");
-    fgets(first, 255, stdin);
-    first[strlen(first)-1] = '\0'; /* remove the newline at the end */
+    printf("Введите свое имя: ");
+    fgets(name, 100, stdin);
+    printf("length = %d\n", strlen(name)); /* строка отладки*/
+    name[strlen(name)-1] = '\0'; /* удалить новую строку в конце*/
 
-    printf("Now enter your last name: ");
-    gets(last); /* buffer overflow? what's that? */
-
-    printf("Hello %s %s!\n", first, last);
+    printf("Здравствуй, %s!\n", name);
     return 0;
 }
